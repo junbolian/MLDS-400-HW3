@@ -19,3 +19,13 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Artifacts / models / temp
+artifacts/
+*.joblib
+*.pkl
