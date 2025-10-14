@@ -1,0 +1,21 @@
+# HW3: ignore data and local junk
+src/data/
+data/
+*.csv
+*.tsv
+*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints
+.pytest_cache/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
