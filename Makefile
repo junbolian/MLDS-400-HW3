@@ -11,11 +11,9 @@ install: venv
 run:
 	$(VENV)/Scripts/python.exe src/train.py
 
-download:
-	$(VENV)/Scripts/python.exe src/download_data.py
-
 docker-build:
 	docker build -t mlds-hw3:latest .
 
 docker-run:
 	docker run --rm mlds-hw3:latest
+
