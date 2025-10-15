@@ -1,5 +1,5 @@
 # src/download_data.py
-import os
+# Purpose: If Kaggle files exist locally, do nothing; otherwise download a single-file fallback.
 import pathlib
 import requests
 
@@ -11,14 +11,14 @@ FALLBACK_URL = "https://raw.githubusercontent.com/datasciencedojo/datasets/maste
 FALLBACK_DEST = DATA_DIR / "titanic.csv"
 
 def main():
-    # 如果已有 Kaggle 三件套中的任意一个，就认为用户已手动下载，不再自动拉取
+    # If any Kaggle-format file exists, we assume the user already downloaded data.
     existing = [f for f in KAGGLE_FILES if (DATA_DIR / f).exists()]
     if existing:
-        print(f"[download_data] Detected local Kaggle files: {existing}. Skip download.")
+        print(f"[download_data] Detected local Kaggle files: {existing}. Skip downloading.")
         return
 
     if FALLBACK_DEST.exists():
-        print(f"[download_data] Found existing file: {FALLBACK_DEST}")
+        print(f"[download_data] Found existing fallback file: {FALLBACK_DEST}")
         return
 
     print(f"[download_data] Downloading fallback Titanic CSV to {FALLBACK_DEST} ...")
