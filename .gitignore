@@ -29,3 +29,13 @@ env/
 artifacts/
 *.joblib
 *.pkl
+
+# R junk
+.Rhistory
+.RData
+.Rproj.user/
+
+# R artifacts / temp
+.Rhistory
+.Rproj.user/
+artifacts/*.rds
