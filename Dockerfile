@@ -5,3 +5,4 @@ COPY requirements.txt /app/requirements.txt
 RUN python -m pip install --upgrade pip && pip install -r requirements.txt
 COPY src /app/src
 CMD ["python", "src/train.py"]
+
